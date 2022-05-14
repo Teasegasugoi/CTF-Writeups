@@ -4,7 +4,7 @@
 # Solution
 初見で解けなかった。\
 pngファイルの中にフラグが隠されているであろう問題。identifyで情報をみてみる。ここで詰んだ。\
-[writeup](https://ctftime.org/writeup/33775)をよむ。\
+writeupをよむ。\
 binwalkとよばれる、ファイルの種別を調べたり、ファイルの中にファイルが含まれているファイルからファイルを抽出できるコマンドがキーだったらしい。\
 binwalkコマンドの簡単な使い方 
 ```shell
@@ -15,3 +15,5 @@ $ binwalk {ファイル名}
 $ binwalk --dd="{抜き出したい拡張子など}" {ファイル名}
 ```
 抽出したフォルダの中にフラグが書かれたpngファイルが存在。
+# Reference
+- https://ctftime.org/writeup/33775
