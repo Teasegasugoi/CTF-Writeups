@@ -30,9 +30,12 @@
 * [Web] Baby's SQLi - Stage 2-
 * [PPC] Remainder theorem
 * [Crypto] Common World
-## picoCTF
-
-
+## picoCTF 2021
+* [GeneralSkills] Obedient Cat
+* [GeneralSkills] Wave a flag
+* [Cryptography] Mod26
+* [Cryptography] Mind your Ps and Qs
+* [ReverseEngineering] Transformation
 
 
 ## ångstromCTF 2022
