@@ -5,7 +5,7 @@ Clam was intensely brainstorming new challenge ideas, when his stomach growled! 
 # Solution
 初見で解けなかった。\
 問題文のタイトルからXSSに関連したやつだな〜と推測。与えられたサイトにアクセスすると、script送ってください感すごいフォームが。`<script>alert('hello');</script>` を送信してみる。すると、表示がおかしいことに気づく。
-![結果](images/result.png)
+![結果](images/result.png)\
 POSTした文字列が何かしら変換されているっぽいので、ソースコードを読んでみる。
 ```javascript
 ~~~

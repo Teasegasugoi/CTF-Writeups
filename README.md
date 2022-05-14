@@ -39,7 +39,7 @@
 
 
 ## ångstromCTF 2022
-
+https://2022.angstromctf.com/
 * [MISC] Confetti
 * [MISC] amongus
 * [MISC] Shark1
