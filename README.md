@@ -3,7 +3,7 @@
 
 
 ## CpawCTF
-***
+
 ### Level1
 * [Misc] Test Problem
 * [Crypto] Classical Cipher
@@ -31,12 +31,12 @@
 * [PPC] Remainder theorem
 * [Crypto] Common World
 ## picoCTF
-***
+
 
 
 
 ## ångstromCTF 2022
-***
+
 * [MISC] Confetti
 * [MISC] amongus
 * [MISC] Shark1
