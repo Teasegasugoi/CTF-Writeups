@@ -47,4 +47,5 @@ https://2022.angstromctf.com/
 * [WEB] Auth Skip
 * [WEB] crumbs
 * [WEB] Xtra Salty Sardines
+* [WEB] Art Gallery
 * [CRYPTO] Vinegar Factory
