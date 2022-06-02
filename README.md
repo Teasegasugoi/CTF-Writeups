@@ -36,6 +36,10 @@
 * [Cryptography] Mod26
 * [Cryptography] Mind your Ps and Qs
 * [ReverseEngineering] Transformation
+* [WebExploitation] GET aHEAD
+* [WebExploitation] Cookies
+* [WebExploitation] Scavenger Hunt
+* [WebExploitation] Some Assembly Required 1
 
 
 ## ångstromCTF 2022
