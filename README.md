@@ -55,3 +55,11 @@ https://2022.angstromctf.com/
 * [WEB] Secure Vault
 * [WEB] NO Flags?
 * [CRYPTO] Vinegar Factory
+
+## SECCON Beginners 2022
+https://score.beginners.azure.noc.seccon.jp/
+* [WEB]Util
+* [WEB]textex
+* [WEB]galley
+* [WEB]serial
+* [WEB]Ironhand
