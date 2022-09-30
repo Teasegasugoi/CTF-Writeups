@@ -40,7 +40,15 @@
 * [WebExploitation] Cookies
 * [WebExploitation] Scavenger Hunt
 * [WebExploitation] Some Assembly Required 1
-
+## picoCTF 2022
+* [WebExploitation] Includes
+* [WebExploitation] Inspect HTML
+* [WebExploitation] Local Authority
+* [WebExploitation] Search source
+* [WebExploitation] Forbidden Paths
+* [WebExploitation] Power Cookie
+* [WebExploitation] Roboto Sans
+* [WebExploitation] Secrets
 
 ## ångstromCTF 2022
 https://2022.angstromctf.com/
