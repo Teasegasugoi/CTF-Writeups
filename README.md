@@ -71,3 +71,10 @@ https://score.beginners.azure.noc.seccon.jp/
 * [WEB]galley
 * [WEB]serial
 * [WEB]Ironhand
+
+## TsukuCTF 2022
+https://tsukuctf.sechack365.com/
+* [OSINT] Desk
+* [OSINT] TakaiTakai
+* [OSINT] moon
+* [WEB] bughunter
